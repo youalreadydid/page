@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temporal Maintenance</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+      body {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+        background: #000;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      .marquee-content {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100%;
+        animation: marquee 20s linear infinite;
+        font-family: "VT323", monospace;
+        font-size: 36px;
+        color: #00ff00;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-100%, 0);
+        }
+      }
+      @media (max-width: 768px) {
+        .marquee-content {
+          font-size: 24px;
+        }
+      }
+      @media (max-width: 480px) {
+        .marquee-content {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      <div class="marquee-content">
+        Come back later... Time travel loading: 99% complete.
+      </div>
+    </div>
+  </body>
+</html>
